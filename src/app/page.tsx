@@ -14,14 +14,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-background p-4">
+    <div className="flex flex-col min-h-screen bg-background">
       {/* Hero Section */}
       <section
         className="bg-primary text-primary-foreground py-12 mb-8"
       >
         <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column: Text Content */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left p-4">
             <h1 className="text-4xl font-bold mb-4">
               Raih Mimpimu Menjadi Aparatur Negara
             </h1>
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="flex-grow grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <main className="flex-grow grid gap-4 md:grid-cols-2 lg:grid-cols-3 p-4">
         {/* Feature Cards */}
         <Card>
           <CardHeader>
@@ -89,7 +89,7 @@ export default function Home() {
         </Card>
       </main>
 
-      <footer className="py-4 text-center text-muted-foreground">
+      <footer className="py-4 text-center text-muted-foreground p-4">
         {isClient ? (
           <>
             &copy; {new Date().getFullYear()} Aparatur Coach. Hak cipta
@@ -102,3 +102,4 @@ export default function Home() {
     </div>
   );
 }
+
