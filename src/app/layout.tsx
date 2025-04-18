@@ -13,24 +13,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Aparatur Coach - Jalur Anda Menuju Aparatur Negara',
+  title: 'Tryout TNI POLRI Online - Aparatur Coach',
   description:
-    'Aparatur Coach menyediakan tryout online komprehensif untuk ujian masuk TNI dan POLRI. Persiapkan diri dengan program yang disesuaikan dan analisis kinerja berbasis AI kami.',
+    'Persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach. Latihan soal terupdate, analisis AI, dan persiapan karirmu sebagai abdi negara.',
   keywords: [
-    'tryout',
-    'TNI',
-    'POLRI',
-    'tryout online',
-    'aparatur negara',
-    'ujian masuk',
-    'analisis kinerja',
+    'tryout TNI',
+    'tryout POLRI',
+    'ujian masuk TNI',
+    'ujian masuk POLRI',
+    'persiapan TNI',
+    'persiapan POLRI',
+    'latihan soal TNI',
+    'latihan soal POLRI',
     'Aparatur Coach',
+    'tes TNI',
+    'tes POLRI',
+    'simulasi CAT TNI',
+    'simulasi CAT POLRI',
   ],
   authors: [{name: 'Aparatur Coach'}],
   openGraph: {
-    title: 'Aparatur Coach - Jalur Anda Menuju Aparatur Negara',
+    title: 'Tryout TNI POLRI Online - Aparatur Coach',
     description:
-      'Tryout online komprehensif untuk ujian masuk TNI dan POLRI.',
+      'Persiapan sukses ujian TNI dan POLRI dengan tryout online. Latihan soal, analisis AI, dan persiapan karirmu sebagai abdi negara.',
     url: 'https://aparaturcoach.com',
     siteName: 'Aparatur Coach',
     images: [
@@ -45,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aparatur Coach - Jalur Anda Menuju Aparatur Negara',
+    title: 'Tryout TNI POLRI Online - Aparatur Coach',
     description:
-      'Tryout online komprehensif untuk ujian masuk TNI dan POLRI.',
+      'Persiapan sukses ujian TNI dan POLRI dengan tryout online. Latihan soal, analisis AI, dan persiapan karirmu sebagai abdi negara.',
     images: ['https://aparaturcoach.com/og.png'], // Replace with your actual OG image
     creator: '@AparaturCoach',
   },
@@ -78,10 +83,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
+      <head>
+        <meta name="robots" content="index, follow" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
   );
 }
-
