@@ -17,9 +17,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background p-4">
       {/* Hero Section */}
       <section
-        className="bg-primary text-primary-foreground py-12 rounded-lg mb-8"
+        className="bg-primary text-primary-foreground py-12 mb-8"
       >
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column: Text Content */}
           <div className="text-center md:text-left">
             <h1 className="text-4xl font-bold mb-4">
@@ -41,6 +41,7 @@ export default function Home() {
               alt="Ilustrasi TNI dan POLRI"
               width={500}
               height={300}
+              style={{width: '100%', height: 'auto'}}
               className="rounded-lg shadow-md"
             />
           </div>
