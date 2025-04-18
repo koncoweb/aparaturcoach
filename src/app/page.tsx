@@ -4,6 +4,7 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Input} from '@/components/ui/input';
 import {useEffect, useState} from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -14,64 +15,75 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background p-4">
-      <header className="py-6">
-        <h1 className="text-4xl font-bold text-primary">Aparatur Coach</h1>
-        <p className="text-muted-foreground">
-          Your path to becoming a state apparatus starts here.
-        </p>
-      </header>
+      {/* Hero Section */}
+      <section
+        className="bg-primary text-primary-foreground py-12 rounded-lg mb-8"
+      >
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Left Column: Text Content */}
+          <div className="text-center md:text-left">
+            <h1 className="text-4xl font-bold mb-4">
+              Raih Mimpimu Menjadi Aparatur Negara
+            </h1>
+            <p className="text-lg mb-6">
+              Persiapkan dirimu dengan tryout online terpercaya dan analisis AI
+              untuk sukses dalam seleksi TNI dan POLRI.
+            </p>
+            <div className="flex justify-center md:justify-start">
+              <Button size="lg">Mulai Sekarang</Button>
+            </div>
+          </div>
+
+          {/* Right Column: Image */}
+          <div className="flex justify-center">
+            <Image
+              src="https://picsum.photos/500/300"
+              alt="Ilustrasi TNI dan POLRI"
+              width={500}
+              height={300}
+              className="rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </section>
 
       <main className="flex-grow grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {/* Hero Card */}
-        <Card className="col-span-full">
-          <CardHeader>
-            <CardTitle className="text-2xl">Ready to start your journey?</CardTitle>
-            <CardDescription>
-              Access exclusive tryout packages and boost your preparation.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="flex gap-2">
-              <Input type="email" placeholder="Enter your email"/>
-              <Button>Get Started</Button>
-            </div>
-          </CardContent>
-        </Card>
-
         {/* Feature Cards */}
         <Card>
           <CardHeader>
-            <CardTitle>Comprehensive Tryout Packages</CardTitle>
+            <CardTitle>Paket Tryout Komprehensif</CardTitle>
             <CardDescription>
-              Detailed simulations for TNI and Police entrance exams.
+              Simulasi lengkap untuk ujian masuk TNI dan POLRI.
             </CardDescription>
           </CardHeader>
           <CardContent>
-            Explore our catalog for a package that fits your needs.
+            Jelajahi katalog kami untuk menemukan paket yang sesuai dengan
+            kebutuhanmu.
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>AI-Powered Performance Analysis</CardTitle>
+            <CardTitle>Analisis Performa dengan AI</CardTitle>
             <CardDescription>
-              Personalized feedback to help you focus on your weaknesses.
+              Feedback personal untuk membantumu fokus pada kelemahan.
             </CardDescription>
           </CardHeader>
           <CardContent>
-            Our AI adapts to your performance, providing targeted guidance.
+            AI kami beradaptasi dengan performamu, memberikan panduan yang
+            tepat sasaran.
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Track Your Progress</CardTitle>
+            <CardTitle>Lacak Kemajuanmu</CardTitle>
             <CardDescription>
-              Monitor your scores and improvements over time.
+              Pantau skor dan peningkatanmu dari waktu ke waktu.
             </CardDescription>
           </CardHeader>
           <CardContent>
-            Stay motivated with a clear view of your advancement.
+            Tetap termotivasi dengan tampilan yang jelas tentang kemajuanmu.
           </CardContent>
         </Card>
       </main>
@@ -79,10 +91,11 @@ export default function Home() {
       <footer className="py-4 text-center text-muted-foreground">
         {isClient ? (
           <>
-            &copy; {new Date().getFullYear()} Aparatur Coach. All rights reserved.
+            &copy; {new Date().getFullYear()} Aparatur Coach. Hak cipta
+            dilindungi.
           </>
         ) : (
-          <>Loading...</>
+          <>Memuat...</>
         )}
       </footer>
     </div>
