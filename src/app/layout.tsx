@@ -13,24 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Aparatur Coach - Your Path to National Apparatus',
+  title: 'Aparatur Coach - Jalur Anda Menuju Aparatur Negara',
   description:
-    'Aparatur Coach provides comprehensive online tryouts for TNI and POLRI entrance exams. Prepare with our tailored programs and AI-powered performance analysis.',
+    'Aparatur Coach menyediakan tryout online komprehensif untuk ujian masuk TNI dan POLRI. Persiapkan diri dengan program yang disesuaikan dan analisis kinerja berbasis AI kami.',
   keywords: [
     'tryout',
     'TNI',
     'POLRI',
-    'online tryout',
-    'state apparatus',
-    'entrance exam',
-    'performance analysis',
+    'tryout online',
+    'aparatur negara',
+    'ujian masuk',
+    'analisis kinerja',
     'Aparatur Coach',
   ],
   authors: [{name: 'Aparatur Coach'}],
   openGraph: {
-    title: 'Aparatur Coach - Your Path to National Apparatus',
+    title: 'Aparatur Coach - Jalur Anda Menuju Aparatur Negara',
     description:
-      'Comprehensive online tryouts for TNI and POLRI entrance exams.',
+      'Tryout online komprehensif untuk ujian masuk TNI dan POLRI.',
     url: 'https://aparaturcoach.com',
     siteName: 'Aparatur Coach',
     images: [
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
         height: 600,
       },
     ],
-    locale: 'en_US',
+    locale: 'id_ID',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aparatur Coach - Your Path to National Apparatus',
+    title: 'Aparatur Coach - Jalur Anda Menuju Aparatur Negara',
     description:
-      'Comprehensive online tryouts for TNI and POLRI entrance exams.',
+      'Tryout online komprehensif untuk ujian masuk TNI dan POLRI.',
     images: ['https://aparaturcoach.com/og.png'], // Replace with your actual OG image
     creator: '@AparaturCoach',
   },
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     nocache: false,
     googleBot: {
       index: true,
-      follow: false,
+      follow: true,
     },
   },
   icons: {
@@ -77,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
