@@ -6,6 +6,8 @@ import {Input} from '@/components/ui/input';
 import {useEffect, useState} from 'react';
 import Image from 'next/image';
 
+const imageUrl = 'https://images.unsplash.com/photo-1673670482432-628286a71041?q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80';
+
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
 
@@ -17,7 +19,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Hero Section */}
       <section
-        className="bg-primary text-primary-foreground py-12 mb-8"
+        className="bg-primary text-primary-foreground py-12 w-full"
       >
         <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column: Text Content */}
@@ -37,12 +39,12 @@ export default function Home() {
           {/* Right Column: Image */}
           <div className="flex justify-center">
             <Image
-              src="https://picsum.photos/500/300"
+              src={imageUrl}
               alt="Ilustrasi TNI dan POLRI"
               width={500}
               height={300}
-              style={{width: '100%', height: 'auto'}}
-              className="rounded-lg shadow-md"
+              style={{width: '100%', height: 'auto', objectFit: 'cover'}}
+              className="shadow-md"
             />
           </div>
         </div>
@@ -102,4 +104,3 @@ export default function Home() {
     </div>
   );
 }
-
