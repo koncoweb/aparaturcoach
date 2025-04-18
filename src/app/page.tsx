@@ -91,7 +91,7 @@ export default function Home() {
         </Card>
       </main>
 
-      <footer className="py-4 text-center text-muted-foreground p-4">
+      <footer className="py-4 text-center text-muted-foreground p-4 bg-secondary">
         {isClient ? (
           <>
             &copy; {new Date().getFullYear()} Aparatur Coach. Hak cipta
