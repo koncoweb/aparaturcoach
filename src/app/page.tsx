@@ -90,7 +90,25 @@ export default function Home() {
           </CardContent>
         </Card>
       </main>
-
+      <div className="text-xs p-4">
+        <p>Persiapkan diri Anda menghadapi tes kepolisian dengan tryout online terlengkap dan terpercaya! Latihan soal tes kepolisian, ketahui tahapan tes kepolisian, dan dapatkan informasi terbaru seputar tes kepolisian 2024 dan tes kepolisian 2025. Tersedia ribuan soal dengan tingkat kesulitan Easy dan update soal tes kepolisian terbaru. Daftar sekarang dan wujudkan cita-citamu!</p>
+        <br />
+        <p>Selamat datang di platform tryout tes kepolisian online terbaik! Kami hadir untuk membantu Anda mempersiapkan diri secara maksimal dalam menghadapi seleksi penerimaan anggota Polri. Impian untuk menjadi bagian dari kepolisian Republik Indonesia kini semakin dekat dengan latihan tryout yang komprehensif dan terstruktur dari kami.</p>
+        <br />
+        <p>Mengapa Memilih Tryout Tes Kepolisian Kami?</p>
+        <p>Kami memahami betapa pentingnya persiapan yang matang untuk menghadapi setiap tahapan seleksi. Oleh karena itu, kami menyediakan berbagai fitur unggulan yang akan menjadi bekal berharga Anda:</p>
+        <p>Ribuan Soal Tes Kepolisian Terupdate: Latihan dengan ribuan soal tes kepolisian yang selalu diperbarui sesuai dengan materi ujian terkini. Anda akan menemukan berbagai jenis soal yang akan menguji kemampuan akademik, psikologi, dan pengetahuan umum Anda.</p>
+        <p>Tingkat Kesulitan yang Bervariasi: Mulai dari soal dengan tingkat kesulitan Easy hingga soal yang lebih menantang, semuanya tersedia untuk mengukur kemampuan Anda secara bertahap.</p>
+        <p>Simulasi Ujian Realistis: Rasakan atmosfer ujian sesungguhnya dengan simulasi tryout yang dirancang menyerupai tahapan tes kepolisian yang sebenarnya. Ini akan membantu Anda mengelola waktu dan mengurangi rasa gugup saat menghadapi ujian nanti.</p>
+        <p>Akses Mudah Kapan Saja, Di Mana Saja: Dengan platform online kami, Anda dapat belajar dan berlatih kapan saja dan di mana saja selama 7 days seminggu. Fleksibilitas ini memungkinkan Anda untuk menyesuaikan jadwal belajar dengan kesibukan Anda.</p>
+        <p>Informasi Terkini Seputar Tes Kepolisian: Dapatkan informasi terbaru mengenai tes kepolisian 2024 dan persiapan untuk tes kepolisian 2025. Kami akan terus mengupdate informasi penting seperti jadwal tes kepolisian 2024 (jika sudah ada pengumuman resmi).</p>
+        <p>Materi Lengkap untuk Berbagai Jenis Tes: Kami menyediakan latihan soal untuk berbagai jenis tes yang mungkin Anda hadapi, termasuk informasi mengenai tes kepolisian apa saja yang akan diujikan.</p>
+        <p>Fokus pada Persiapan Tes Kepolisian Wanita: Kami juga memberikan perhatian khusus pada kebutuhan calon anggota tes kepolisian wanita dengan menyediakan materi dan simulasi yang relevan.</p>
+        <p>Pemahaman Mendalam tentang Urutan Tes Kepolisian: Dengan berlatih bersama kami, Anda akan memahami urutan tes kepolisian secara keseluruhan, mulai dari seleksi administrasi hingga tes akhir.</p>
+        <p>Persiapan Optimal untuk Masa Depan Gemilang</p>
+        <p>Jangan lewatkan kesempatan emas ini untuk mempersiapkan diri Anda secara optimal. Dengan tryout tes kepolisian online kami, Anda akan lebih percaya diri dan siap menghadapi setiap tantangan dalam seleksi penerimaan Polri.</p>
+        <p>Mulai Latihan Sekarang dan Wujudkan Impian Anda!</p>
+      </div>
       <footer className="py-4 text-center text-muted-foreground p-4 bg-secondary">
         {isClient ? (
           <>
@@ -104,3 +122,4 @@ export default function Home() {
     </div>
   );
 }
+
