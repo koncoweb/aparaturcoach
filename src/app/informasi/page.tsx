@@ -3,40 +3,41 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Informasi Persiapan Lengkap Tryout TNI & POLRI | Aparatur Coach',
-  description: 'Dapatkan informasi lengkap mengenai tahapan seleksi, materi ujian, tips sukses, dan jadwal pendaftaran terbaru untuk seleksi TNI dan POLRI. Persiapkan dirimu bersama Aparatur Coach.',
+  title: 'Informasi Seleksi TNI & POLRI Terbaru | Aparatur Coach',
+  description: 'Dapatkan informasi lengkap mengenai tahapan seleksi, materi ujian, tips sukses, dan jadwal pendaftaran terbaru untuk seleksi TNI dan POLRI 2024/2025. Persiapkan dirimu bersama Aparatur Coach.',
   keywords: [
-    'informasi TNI',
-    'informasi POLRI',
-    'seleksi TNI',
-    'seleksi POLRI',
+    'informasi seleksi TNI',
+    'informasi seleksi POLRI',
     'tahapan tes TNI',
     'tahapan tes POLRI',
-    'materi ujian TNI',
-    'materi ujian POLRI',
+    'materi ujian TNI POLRI',
     'tips lolos TNI POLRI',
-    'jadwal pendaftaran TNI POLRI',
+    'jadwal pendaftaran TNI 2024',
+    'jadwal pendaftaran POLRI 2024',
+    'tes kepolisian 2024',
+    'tes TNI 2024',
+    'persyaratan masuk TNI',
+    'persyaratan masuk POLRI',
     'Aparatur Coach',
-    'bimbingan belajar TNI POLRI',
   ],
   openGraph: {
-    title: 'Informasi Persiapan Lengkap Tryout TNI & POLRI | Aparatur Coach',
-    description: 'Dapatkan informasi lengkap mengenai tahapan seleksi, materi ujian, tips sukses, dan jadwal pendaftaran terbaru untuk seleksi TNI dan POLRI.',
+    title: 'Informasi Lengkap Persiapan Seleksi TNI & POLRI | Aparatur Coach',
+    description: 'Semua yang perlu Anda ketahui tentang tahapan seleksi, materi ujian, tips, dan jadwal terbaru TNI & POLRI. Disajikan oleh Aparatur Coach.',
     url: 'https://aparaturcoach.com/informasi',
     images: [
        {
-         url: 'https://aparaturcoach.com/og-informasi.png', // Suggest a relevant OG image
-         width: 800,
-         height: 600,
-         alt: 'Informasi Seleksi TNI POLRI',
+         url: 'https://aparaturcoach.com/og-informasi.png', // Use a specific OG image for this page
+         width: 1200,
+         height: 630,
+         alt: 'Informasi Lengkap Seleksi TNI POLRI',
        },
     ],
   },
    twitter: {
     card: 'summary_large_image',
-    title: 'Informasi Persiapan Lengkap Tryout TNI & POLRI | Aparatur Coach',
-    description: 'Info lengkap tahapan seleksi, materi ujian, dan tips sukses TNI POLRI.',
-    images: ['https://aparaturcoach.com/og-informasi.png'], // Suggest a relevant Twitter image
+    title: 'Informasi Penting Seleksi TNI & POLRI - Aparatur Coach',
+    description: 'Panduan lengkap tahapan seleksi, materi ujian, dan tips sukses masuk TNI & POLRI 2024/2025.',
+    images: ['https://aparaturcoach.com/og-informasi.png'], // Use a specific Twitter image for this page
   },
 };
 

@@ -1,5 +1,5 @@
-import type {Metadata} from 'next';
-import {Geist, Geist_Mono} from 'next/font/google';
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header'; // Import Header component
 
@@ -14,34 +14,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Tryout TNI POLRI Online - Aparatur Coach',
+  title: 'Tryout TNI POLRI Online Terbaik & Terpercaya | Aparatur Coach',
   description:
-    'Persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach. Latihan soal terupdate, analisis AI, dan persiapan karirmu sebagai abdi negara.',
+    'Informasi lengkap dan persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach. Latihan soal terupdate, analisis AI, dan persiapan karirmu sebagai abdi negara.',
   keywords: [
-    'tryout TNI',
-    'tryout POLRI',
-    'ujian masuk TNI',
-    'ujian masuk POLRI',
-    'persiapan TNI',
-    'persiapan POLRI',
-    'latihan soal TNI',
-    'latihan soal POLRI',
+    'informasi tryout TNI',
+    'informasi tryout POLRI',
+    'informasi ujian masuk TNI',
+    'informasi ujian masuk POLRI',
+    'informasi persiapan TNI',
+    'informasi persiapan POLRI',
+    'informasi latihan soal TNI',
+    'informasi latihan soal POLRI',
     'Aparatur Coach',
-    'tes TNI',
-    'tes POLRI',
-    'simulasi CAT TNI',
-    'simulasi CAT POLRI',
+    'informasi tes TNI',
+    'informasi tes POLRI',
+    'informasi simulasi CAT TNI',
+    'informasi simulasi CAT POLRI',
+    'bimbingan belajar TNI',
+    'bimbingan belajar POLRI',
+    'lolos seleksi TNI',
+    'lolos seleksi POLRI',
   ],
-  authors: [{name: 'Aparatur Coach'}],
+  authors: [{ name: 'Aparatur Coach' }],
   openGraph: {
-    title: 'Tryout TNI POLRI Online - Aparatur Coach',
+    title: 'Informasi dan Tryout TNI POLRI Online Terbaik | Aparatur Coach',
     description:
-      'Persiapan sukses ujian TNI dan POLRI dengan tryout online. Latihan soal, analisis AI, dan persiapan karirmu sebagai abdi negara.',
+      'Dapatkan informasi terbaru dan persiapkan diri untuk ujian TNI & POLRI dengan tryout online terpercaya dari Aparatur Coach.',
     url: 'https://aparaturcoach.com',
     siteName: 'Aparatur Coach',
     images: [
       {
-        url: 'https://aparaturcoach.com/og.png', // Replace with your actual OG image
+        url: 'https://aparaturcoach.com/og.png', // Replace with your actual OG image URL
         width: 800,
         height: 600,
         alt: 'Tryout Online TNI POLRI Aparatur Coach',
@@ -52,11 +56,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tryout TNI POLRI Online - Aparatur Coach',
+    title: 'Informasi & Tryout TNI POLRI Online Terbaik - Aparatur Coach',
     description:
-      'Persiapan sukses ujian TNI dan POLRI dengan tryout online. Latihan soal, analisis AI, dan persiapan karirmu sebagai abdi negara.',
-    images: ['https://aparaturcoach.com/og.png'], // Replace with your actual OG image
-    creator: '@AparaturCoach',
+      'Info lengkap & persiapan sukses ujian TNI POLRI dengan tryout online dan analisis AI. Gabung Aparatur Coach!',
+    images: ['https://aparaturcoach.com/og.png'], // Replace with your actual OG image URL
+    creator: '@AparaturCoach', // Replace with actual Twitter handle if available
   },
   robots: {
     index: true,
@@ -65,13 +69,17 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: true, // Optional: If you don't want images indexed
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   icons: {
     icon: [
-        { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
-        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
     shortcut: '/shortcut-icon.png', // Typically same as favicon.ico
     apple: '/apple-icon.png',
@@ -82,7 +90,19 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json', // Add manifest for PWA potential
   metadataBase: new URL('https://aparaturcoach.com'), // Set base URL for relative paths
+  applicationName: 'Aparatur Coach',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  // Add theme color for browser UI theming
+  themeColor: '#003049', // Navy Blue
+  // Add category if applicable
+  // category: 'Education',
 };
+
 
 export default function RootLayout({
   children,
@@ -91,12 +111,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <head>{/* Additional meta tags can be added here directly if needed,
-            but `metadata` object is preferred */}
+      <head>
+        {/* Additional meta tags can be added here directly if needed, but `metadata` object is preferred */}
         <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" /> {/* Replace with your code */}
         {/* Add Schema.org markup if relevant */}
-        <script type="application/ld+json">
-          {`
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
@@ -104,8 +123,7 @@ export default function RootLayout({
               "url": "https://aparaturcoach.com",
               "description": "${metadata.description}"
             }
-          `}
-        </script>
+          `}} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header/> {/* Include the Header component here */}
