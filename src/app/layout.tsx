@@ -91,8 +91,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <head>
-        {/* Additional meta tags can be added here directly if needed,
+      <head>{/* Additional meta tags can be added here directly if needed,
             but `metadata` object is preferred */}
         <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" /> {/* Replace with your code */}
         {/* Add Schema.org markup if relevant */}
