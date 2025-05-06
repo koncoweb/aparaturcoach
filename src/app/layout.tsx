@@ -44,6 +44,7 @@ export const metadata: Metadata = {
         url: 'https://aparaturcoach.com/og.png', // Replace with your actual OG image
         width: 800,
         height: 600,
+        alt: 'Tryout Online TNI POLRI Aparatur Coach',
       },
     ],
     locale: 'id_ID',
@@ -67,14 +68,20 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/shortcut-icon.png',
+    icon: [
+        { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
+        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/shortcut-icon.png', // Typically same as favicon.ico
     apple: '/apple-icon.png',
     other: {
       rel: 'apple-touch-icon-precomposed',
       url: '/apple-touch-icon-precomposed.png',
     },
   },
+  manifest: '/manifest.json', // Add manifest for PWA potential
+  metadataBase: new URL('https://aparaturcoach.com'), // Set base URL for relative paths
 };
 
 export default function RootLayout({
@@ -85,7 +92,21 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <meta name="robots" content="index, follow" />
+        {/* Additional meta tags can be added here directly if needed,
+            but `metadata` object is preferred */}
+        <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" /> {/* Replace with your code */}
+        {/* Add Schema.org markup if relevant */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Aparatur Coach",
+              "url": "https://aparaturcoach.com",
+              "description": "${metadata.description}"
+            }
+          `}
+        </script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header/> {/* Include the Header component here */}
@@ -94,4 +115,3 @@ export default function RootLayout({
     </html>
   );
 }
-
