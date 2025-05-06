@@ -1,7 +1,7 @@
 {
-  "name": "Aparatur Coach - Tryout TNI POLRI",
-  "short_name": "Aparatur Coach",
-  "description": "Persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach.",
+  "name": "Spirit Education - Tryout TNI POLRI",
+  "short_name": "Spirit Education",
+  "description": "Persiapan sukses ujian TNI dan POLRI dengan tryout online Spirit Education.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#143D60",

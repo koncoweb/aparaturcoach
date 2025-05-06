@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Informasi Seleksi TNI & POLRI Terbaru | Aparatur Coach',
-  description: 'Dapatkan informasi lengkap mengenai tahapan seleksi, materi ujian, tips sukses, dan jadwal pendaftaran terbaru untuk seleksi TNI dan POLRI 2024/2025. Persiapkan dirimu bersama Aparatur Coach.',
+  title: 'Informasi Seleksi TNI & POLRI Terbaru | Spirit Education',
+  description: 'Dapatkan informasi lengkap mengenai tahapan seleksi, materi ujian, tips sukses, dan jadwal pendaftaran terbaru untuk seleksi TNI dan POLRI 2024/2025. Persiapkan dirimu bersama Spirit Education.',
   keywords: [
     'informasi seleksi TNI',
     'informasi seleksi POLRI',
@@ -18,15 +18,15 @@ export const metadata: Metadata = {
     'tes TNI 2024',
     'persyaratan masuk TNI',
     'persyaratan masuk POLRI',
-    'Aparatur Coach',
+    'Spirit Education',
   ],
   openGraph: {
-    title: 'Informasi Lengkap Persiapan Seleksi TNI & POLRI | Aparatur Coach',
-    description: 'Semua yang perlu Anda ketahui tentang tahapan seleksi, materi ujian, tips, dan jadwal terbaru TNI & POLRI. Disajikan oleh Aparatur Coach.',
-    url: 'https://aparaturcoach.com/informasi',
+    title: 'Informasi Lengkap Persiapan Seleksi TNI & POLRI | Spirit Education',
+    description: 'Semua yang perlu Anda ketahui tentang tahapan seleksi, materi ujian, tips, dan jadwal terbaru TNI & POLRI. Disajikan oleh Spirit Education.',
+    url: 'https://spiriteducation.id/informasi',
     images: [
        {
-         url: 'https://aparaturcoach.com/og-informasi.png', // Use a specific OG image for this page
+         url: 'https://spiriteducation.id/og-informasi.png', // Use a specific OG image for this page
          width: 1200,
          height: 630,
          alt: 'Informasi Lengkap Seleksi TNI POLRI',
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
    twitter: {
     card: 'summary_large_image',
-    title: 'Informasi Penting Seleksi TNI & POLRI - Aparatur Coach',
+    title: 'Informasi Penting Seleksi TNI & POLRI - Spirit Education',
     description: 'Panduan lengkap tahapan seleksi, materi ujian, dan tips sukses masuk TNI & POLRI 2024/2025.',
-    images: ['https://aparaturcoach.com/og-informasi.png'], // Use a specific Twitter image for this page
+    images: ['https://spiriteducation.id/og-informasi.png'], // Use a specific Twitter image for this page
   },
 };
 
@@ -51,7 +51,7 @@ export default function InformasiPage() {
         </h1>
 
         <p className="text-lg mb-4">
-          Selamat datang di pusat informasi Aparatur Coach! Di sini, Anda akan
+          Selamat datang di pusat informasi Spirit Education! Di sini, Anda akan
           menemukan berbagai informasi penting dan terkini mengenai proses
           seleksi masuk Tentara Nasional Indonesia (TNI) dan Kepolisian Negara
           Republik Indonesia (POLRI). Mempersiapkan diri dengan baik adalah kunci
@@ -145,7 +145,7 @@ export default function InformasiPage() {
           </li>
         </ul>
         <p>
-          Aparatur Coach menyediakan ribuan soal latihan yang mencakup
+          Spirit Education menyediakan ribuan soal latihan yang mencakup
           materi-materi ini, dirancang untuk membiasakan Anda dengan format soal
           dan tingkat kesulitan yang akan dihadapi.
         </p>
@@ -158,7 +158,7 @@ export default function InformasiPage() {
           </li>
           <li>
             <strong>Persiapan Akademik:</strong> Pelajari materi ujian secara
-            mendalam. Manfaatkan platform tryout seperti Aparatur Coach untuk
+            mendalam. Manfaatkan platform tryout seperti Spirit Education untuk
             berlatih soal dan mengukur kemampuan.
           </li>
           <li>
@@ -180,7 +180,7 @@ export default function InformasiPage() {
           </li>
           <li>
             <strong>Manfaatkan Analisis AI:</strong> Gunakan fitur analisis AI
-            dari Aparatur Coach untuk mengidentifikasi kelemahan dan mendapatkan
+            dari Spirit Education untuk mengidentifikasi kelemahan dan mendapatkan
             rekomendasi belajar yang personal.
           </li>
         </ul>

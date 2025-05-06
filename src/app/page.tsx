@@ -41,11 +41,11 @@ export default function Home() {
             <Image
               src={imageUrl}
               alt="Ilustrasi TNI dan POLRI"
-              width={350} // 30% smaller than 500
-              height={210} // 30% smaller than 300
+              width={350} 
+              height={210} 
               style={{width: 'auto', height: 'auto', objectFit: 'contain'}}
               className="shadow-md"
-              data-ai-hint="military police logo"
+              data-ai-hint="logo akademi kepolisian"
             />
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function Home() {
       <footer className="py-8 bg-gray-800 text-gray-300 text-center text-sm">
         <div className="container mx-auto">
           {isClient ? (
-            <p>&copy; {new Date().getFullYear()} Aparatur Coach. Hak cipta dilindungi.</p>
+            <p>&copy; {new Date().getFullYear()} Spirit Education. Hak cipta dilindungi.</p>
           ) : (
             <p>Memuat...</p>
           )}

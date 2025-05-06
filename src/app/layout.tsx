@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aparaturcoach.com'),
+  metadataBase: new URL('https://spiriteducation.id'), // Assuming a new domain or keeping a generic one if not specified
   title: {
-    default: 'Aparatur Coach - Tryout Online TNI & POLRI Terbaik',
-    template: '%s | Aparatur Coach',
+    default: 'Spirit Education - Tryout Online TNI & POLRI Terbaik',
+    template: '%s | Spirit Education',
   },
   description:
-    'Persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach. Latihan soal terupdate, analisis AI, dan panduan karir untuk menjadi abdi negara.',
+    'Persiapan sukses ujian TNI dan POLRI dengan tryout online Spirit Education. Latihan soal terupdate, analisis AI, dan panduan karir untuk menjadi abdi negara.',
   keywords: [
     'tryout tni',
     'tryout polri',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'persiapan polri',
     'latihan soal tni',
     'latihan soal polri',
-    'aparatur coach',
+    'Spirit Education',
     'tes tni',
     'tes polri',
     'simulasi cat tni',
@@ -42,21 +42,21 @@ export const metadata: Metadata = {
     'tes masuk polisi',
     'tes masuk tentara',
   ],
-  authors: [{ name: 'Aparatur Coach', url: 'https://aparaturcoach.com' }],
-  creator: 'Aparatur Coach',
-  publisher: 'Aparatur Coach',
+  authors: [{ name: 'Spirit Education', url: 'https://spiriteducation.id' }],
+  creator: 'Spirit Education',
+  publisher: 'Spirit Education',
   openGraph: {
-    title: 'Aparatur Coach - Tryout Online TNI & POLRI Terbaik',
+    title: 'Spirit Education - Tryout Online TNI & POLRI Terbaik',
     description:
-      'Persiapkan diri Anda untuk sukses dalam ujian masuk TNI dan POLRI dengan platform tryout online interaktif dan analisis AI dari Aparatur Coach.',
-    url: 'https://aparaturcoach.com',
-    siteName: 'Aparatur Coach',
+      'Persiapkan diri Anda untuk sukses dalam ujian masuk TNI dan POLRI dengan platform tryout online interaktif dan analisis AI dari Spirit Education.',
+    url: 'https://spiriteducation.id',
+    siteName: 'Spirit Education',
     images: [
       {
-        url: 'https://aparaturcoach.com/og-image.png', // Ensure this image exists
+        url: 'https://spiriteducation.id/og-image.png', // Ensure this image exists
         width: 1200,
         height: 630,
-        alt: 'Aparatur Coach - Platform Tryout Online TNI & POLRI',
+        alt: 'Spirit Education - Platform Tryout Online TNI & POLRI',
       },
     ],
     locale: 'id_ID',
@@ -64,11 +64,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aparatur Coach - Tryout Online TNI & POLRI Terbaik',
+    title: 'Spirit Education - Tryout Online TNI & POLRI Terbaik',
     description:
-      'Latihan soal TNI & POLRI, analisis performa AI, dan panduan karir. Sukses bersama Aparatur Coach!',
-    images: ['https://aparaturcoach.com/twitter-image.png'], // Ensure this image exists
-    creator: '@aparaturcoach', // Replace with your actual Twitter handle
+      'Latihan soal TNI & POLRI, analisis performa AI, dan panduan karir. Sukses bersama Spirit Education!',
+    images: ['https://spiriteducation.id/twitter-image.png'], // Ensure this image exists
+    creator: '@spiriteducation', // Updated Twitter handle
   },
   robots: {
     index: true,
@@ -91,19 +91,19 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   manifest: '/manifest.json',
-  applicationName: 'Aparatur Coach',
+  applicationName: 'Spirit Education',
   referrer: 'origin-when-cross-origin',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  themeColor: '#003049',
+  themeColor: '#003049', // Kept as is, can be changed if new brand color
   alternates: {
-    canonical: 'https://aparaturcoach.com',
+    canonical: 'https://spiriteducation.id',
     // Add other language versions if applicable
     // languages: {
-    //   'en-US': 'https://aparaturcoach.com/en',
+    // 'en-US': 'https://spiriteducation.id/en',
     // },
   },
 };
@@ -117,14 +117,16 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" />
+        {/* Additional meta tags can be added here directly if needed, but `metadata` object is preferred */}
+        <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" /> {/* Replace with your code */}
+        {/* Add Schema.org markup if relevant */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Aparatur Coach",
-              "url": "https://aparaturcoach.com",
-              "description": "Persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach. Latihan soal terupdate, analisis AI, dan panduan karir untuk menjadi abdi negara."
+              "name": "Spirit Education",
+              "url": "https://spiriteducation.id",
+              "description": "Persiapan sukses ujian TNI dan POLRI dengan tryout online Spirit Education. Latihan soal terupdate, analisis AI, dan panduan karir untuk menjadi abdi negara."
             }
           `}} />
       </head>
@@ -135,4 +137,3 @@ export default function RootLayout({
     </html>
   );
 }
-    

@@ -13,7 +13,7 @@ const Header = () => {
     <header className="sticky top-0 bg-background z-50 shadow-md">
       <div className="container mx-auto py-4 px-6 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold text-primary">
-          Aparatur Coach
+          Spirit Education
         </Link>
 
         {/* Desktop Navigation */}
@@ -43,7 +43,7 @@ const Header = () => {
           <SheetContent side="right" className="w-full sm:w-64">
             <div className="flex flex-col space-y-4 p-6">
               <Link href="/" className="text-lg font-bold text-primary">
-                Aparatur Coach
+                Spirit Education
               </Link>
               <Link href="/tryout" className="hover:text-primary">
                 Tryout
