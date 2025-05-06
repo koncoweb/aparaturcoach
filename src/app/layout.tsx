@@ -14,41 +14,49 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Tryout TNI POLRI Online Terbaik & Terpercaya | Aparatur Coach',
+  metadataBase: new URL('https://aparaturcoach.com'),
+  title: {
+    default: 'Aparatur Coach - Tryout Online TNI & POLRI Terbaik',
+    template: '%s | Aparatur Coach',
+  },
   description:
-    'Informasi lengkap dan persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach. Latihan soal terupdate, analisis AI, dan persiapan karirmu sebagai abdi negara.',
+    'Persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach. Latihan soal terupdate, analisis AI, dan panduan karir untuk menjadi abdi negara.',
   keywords: [
-    'informasi tryout TNI',
-    'informasi tryout POLRI',
-    'informasi ujian masuk TNI',
-    'informasi ujian masuk POLRI',
-    'informasi persiapan TNI',
-    'informasi persiapan POLRI',
-    'informasi latihan soal TNI',
-    'informasi latihan soal POLRI',
-    'Aparatur Coach',
-    'informasi tes TNI',
-    'informasi tes POLRI',
-    'informasi simulasi CAT TNI',
-    'informasi simulasi CAT POLRI',
-    'bimbingan belajar TNI',
-    'bimbingan belajar POLRI',
-    'lolos seleksi TNI',
-    'lolos seleksi POLRI',
+    'tryout tni',
+    'tryout polri',
+    'ujian masuk tni',
+    'ujian masuk polri',
+    'persiapan tni',
+    'persiapan polri',
+    'latihan soal tni',
+    'latihan soal polri',
+    'aparatur coach',
+    'tes tni',
+    'tes polri',
+    'simulasi cat tni',
+    'simulasi cat polri',
+    'bimbingan belajar tni',
+    'bimbingan belajar polri',
+    'lolos seleksi tni',
+    'lolos seleksi polri',
+    'tes masuk polisi',
+    'tes masuk tentara',
   ],
-  authors: [{ name: 'Aparatur Coach' }],
+  authors: [{ name: 'Aparatur Coach', url: 'https://aparaturcoach.com' }],
+  creator: 'Aparatur Coach',
+  publisher: 'Aparatur Coach',
   openGraph: {
-    title: 'Informasi dan Tryout TNI POLRI Online Terbaik | Aparatur Coach',
+    title: 'Aparatur Coach - Tryout Online TNI & POLRI Terbaik',
     description:
-      'Dapatkan informasi terbaru dan persiapkan diri untuk ujian TNI & POLRI dengan tryout online terpercaya dari Aparatur Coach.',
+      'Persiapkan diri Anda untuk sukses dalam ujian masuk TNI dan POLRI dengan platform tryout online interaktif dan analisis AI dari Aparatur Coach.',
     url: 'https://aparaturcoach.com',
     siteName: 'Aparatur Coach',
     images: [
       {
-        url: 'https://aparaturcoach.com/og.png', // Replace with your actual OG image URL
-        width: 800,
-        height: 600,
-        alt: 'Tryout Online TNI POLRI Aparatur Coach',
+        url: 'https://aparaturcoach.com/og-image.png', // Ensure this image exists
+        width: 1200,
+        height: 630,
+        alt: 'Aparatur Coach - Platform Tryout Online TNI & POLRI',
       },
     ],
     locale: 'id_ID',
@@ -56,20 +64,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Informasi & Tryout TNI POLRI Online Terbaik - Aparatur Coach',
+    title: 'Aparatur Coach - Tryout Online TNI & POLRI Terbaik',
     description:
-      'Info lengkap & persiapan sukses ujian TNI POLRI dengan tryout online dan analisis AI. Gabung Aparatur Coach!',
-    images: ['https://aparaturcoach.com/og.png'], // Replace with your actual OG image URL
-    creator: '@AparaturCoach', // Replace with actual Twitter handle if available
+      'Latihan soal TNI & POLRI, analisis performa AI, dan panduan karir. Sukses bersama Aparatur Coach!',
+    images: ['https://aparaturcoach.com/twitter-image.png'], // Ensure this image exists
+    creator: '@aparaturcoach', // Replace with your actual Twitter handle
   },
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: true, // Optional: If you don't want images indexed
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
@@ -81,15 +87,10 @@ export const metadata: Metadata = {
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
-    shortcut: '/shortcut-icon.png', // Typically same as favicon.ico
+    shortcut: '/shortcut-icon.png',
     apple: '/apple-icon.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/apple-touch-icon-precomposed.png',
-    },
   },
-  manifest: '/manifest.json', // Add manifest for PWA potential
-  metadataBase: new URL('https://aparaturcoach.com'), // Set base URL for relative paths
+  manifest: '/manifest.json',
   applicationName: 'Aparatur Coach',
   referrer: 'origin-when-cross-origin',
   formatDetection: {
@@ -97,10 +98,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  // Add theme color for browser UI theming
-  themeColor: '#003049', // Navy Blue
-  // Add category if applicable
-  // category: 'Education',
+  themeColor: '#003049',
+  alternates: {
+    canonical: 'https://aparaturcoach.com',
+    // Add other language versions if applicable
+    // languages: {
+    //   'en-US': 'https://aparaturcoach.com/en',
+    // },
+  },
 };
 
 
@@ -112,23 +117,22 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        {/* Additional meta tags can be added here directly if needed, but `metadata` object is preferred */}
-        <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" /> {/* Replace with your code */}
-        {/* Add Schema.org markup if relevant */}
+        <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Aparatur Coach",
               "url": "https://aparaturcoach.com",
-              "description": "${metadata.description}"
+              "description": "Persiapan sukses ujian TNI dan POLRI dengan tryout online Aparatur Coach. Latihan soal terupdate, analisis AI, dan panduan karir untuk menjadi abdi negara."
             }
           `}} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Header/> {/* Include the Header component here */}
+        <Header/>
         {children}
       </body>
     </html>
   );
 }
+    
