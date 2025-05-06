@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+// import { GeistSans } from 'geist/font/sans';
+// import { GeistMono } from 'geist/font/mono'; // Removing this line
+
 import './globals.css';
 import Header from '@/components/Header'; // Import Header component
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     'persiapan polri',
     'latihan soal tni',
     'latihan soal polri',
-    'spirit education',
+    'Spirit Education',
     'tes tni',
     'tes polri',
     'simulasi cat tni',
@@ -91,7 +92,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  themeColor: '#143D60', // Example theme color, adjust as needed
+  themeColor: '#003049',
   alternates: {
     canonical: 'https://spiriteducation.id',
     // Add other language versions if applicable
@@ -114,7 +115,6 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        {/* Additional meta tags can be added here directly if needed, but `metadata` object is preferred */}
         <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" /> {/* Replace with your code */}
         {/* Add Schema.org markup if relevant */}
         <script
@@ -134,8 +134,8 @@ export default function RootLayout({
             }),
           }}
         />
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+       </head>
+      <body className={` antialiased flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-grow">
           {children}
