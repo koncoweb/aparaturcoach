@@ -14,61 +14,63 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://spiriteducation.id'), // Assuming a new domain or keeping a generic one if not specified
+  metadataBase: new URL('https://spiriteducation.id'),
   title: {
-    default: 'Spirit Education - Tryout Online TNI & POLRI Terbaik',
+    default: 'Tryout TNI POLRI Online - Spirit Education',
     template: '%s | Spirit Education',
   },
   description:
-    'Persiapan sukses ujian TNI dan POLRI dengan tryout online Spirit Education. Latihan soal terupdate, analisis AI, dan panduan karir untuk menjadi abdi negara.',
-  keywords: [
-    'tryout tni',
-    'tryout polri',
-    'ujian masuk tni',
-    'ujian masuk polri',
-    'persiapan tni',
-    'persiapan polri',
-    'latihan soal tni',
-    'latihan soal polri',
-    'Spirit Education',
-    'tes tni',
-    'tes polri',
-    'simulasi cat tni',
-    'simulasi cat polri',
-    'bimbingan belajar tni',
-    'bimbingan belajar polri',
-    'lolos seleksi tni',
-    'lolos seleksi polri',
-    'tes masuk polisi',
-    'tes masuk tentara',
-  ],
+    'Persiapan sukses ujian TNI dan POLRI dengan tryout online Spirit Education. Latihan soal terupdate, analisis AI, dan panduan karirmu sebagai abdi negara.',
   authors: [{ name: 'Spirit Education', url: 'https://spiriteducation.id' }],
   creator: 'Spirit Education',
   publisher: 'Spirit Education',
+  keywords: [
+    'tryout TNI',
+    'tryout POLRI',
+    'ujian masuk TNI',
+    'ujian masuk POLRI',
+    'persiapan TNI',
+    'persiapan POLRI',
+    'latihan soal TNI',
+    'latihan soal POLRI',
+    'Spirit Education',
+    'tes TNI',
+    'tes POLRI',
+    'simulasi CAT TNI',
+    'simulasi CAT POLRI',
+    'bimbel TNI',
+    'bimbel POLRI',
+    'lolos seleksi TNI',
+    'lolos seleksi POLRI',
+    'tes masuk polisi',
+    'tes masuk tentara',
+    'informasi tes TNI',
+    'informasi tes POLRI',
+  ],
   openGraph: {
-    title: 'Spirit Education - Tryout Online TNI & POLRI Terbaik',
+    title: 'Tryout TNI POLRI Online - Spirit Education',
     description:
-      'Persiapkan diri Anda untuk sukses dalam ujian masuk TNI dan POLRI dengan platform tryout online interaktif dan analisis AI dari Spirit Education.',
+      'Persiapan sukses ujian TNI dan POLRI dengan tryout online. Latihan soal, analisis AI, dan persiapan karirmu sebagai abdi negara.',
     url: 'https://spiriteducation.id',
     siteName: 'Spirit Education',
-    images: [
-      {
-        url: 'https://spiriteducation.id/og-image.png', // Ensure this image exists
-        width: 1200,
-        height: 630,
-        alt: 'Spirit Education - Platform Tryout Online TNI & POLRI',
-      },
-    ],
     locale: 'id_ID',
     type: 'website',
+    images: [
+      {
+        url: 'https://spiriteducation.id/og.png', // Pastikan gambar ini ada
+        width: 800,
+        height: 600,
+        alt: 'Tryout Online TNI POLRI oleh Spirit Education',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spirit Education - Tryout Online TNI & POLRI Terbaik',
+    title: 'Tryout TNI POLRI Online - Spirit Education',
     description:
-      'Latihan soal TNI & POLRI, analisis performa AI, dan panduan karir. Sukses bersama Spirit Education!',
-    images: ['https://spiriteducation.id/twitter-image.png'], // Ensure this image exists
-    creator: '@spiriteducation', // Updated Twitter handle
+      'Persiapan sukses ujian TNI dan POLRI dengan tryout online. Latihan soal, analisis AI, dan persiapan karirmu sebagai abdi negara.',
+    creator: '@spiriteducation',
+    images: ['https://spiriteducation.id/og.png'], // Pastikan gambar ini ada
   },
   robots: {
     index: true,
@@ -83,7 +85,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
+      { url: '/favicon.ico', type: 'image/x-icon', sizes: '16x16' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
@@ -98,7 +100,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  themeColor: '#003049', // Kept as is, can be changed if new brand color
+  themeColor: '#1A2E40', // Example theme color, adjust as needed
   alternates: {
     canonical: 'https://spiriteducation.id',
     // Add other language versions if applicable
@@ -108,7 +110,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -117,9 +118,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        {/* Additional meta tags can be added here directly if needed, but `metadata` object is preferred */}
         <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" /> {/* Replace with your code */}
-        {/* Add Schema.org markup if relevant */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
             {
               "@context": "https://schema.org",
@@ -132,7 +131,14 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header/>
-        {children}
+        <main className="flex-grow">
+          {children}
+        </main>
+        <footer className="py-8 bg-gray-800 text-gray-300 text-center text-sm">
+          <div className="container mx-auto">
+            <p>&copy; {new Date().getFullYear()} Spirit Education. Hak cipta dilindungi.</p>
+          </div>
+        </footer>
       </body>
     </html>
   );
